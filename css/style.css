@@ -478,7 +478,7 @@ header {
 
 .footer-wrapper {
   display: flex;
-  align-items: flex-start;
+  align-items: baseline;
 }
 
 .logo-footer {
@@ -502,8 +502,8 @@ header {
   margin-right: 70px;
 }
 
-.footer-wrapper {
-  align-items: baseline;
+.footer-our-links {
+  margin-right: 93px;
 }
 
 .foter-text {
@@ -565,6 +565,74 @@ header {
 
 .footer-webs {
   display: flex;
+}
+
+.subscribe-text {
+  margin-bottom: 20px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+.subscribe-input {
+  width: 358px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: var(--dark-bg-color);
+  margin-right: 12px;
+}
+
+.subscribe-input::placeholder {
+  font-style: normal;
+  font-weight: var(--secondary-font-weight);
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-form {
+  display: flex;
+}
+
+.subscribe-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 28px 10px 29px;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-style: none;
+  cursor: pointer;
+  outline: transparent;
+  
+  font-family: inherit;
+  font-style: normal;
+  font-weight: var(--main-font-weight);
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+}
+
+.subscribe-button::after {
+  display: inline-block;
+  content: "";
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/send.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* Portfolio page */
@@ -848,9 +916,8 @@ textarea {
   border-color: var(--accent-color);
 }
  
-.field:focus-within input,
-.field:focus-within .input-svg {
-  color: var(--accent-color);
+.field:focus-within .form-svg {
+  fill: var(--accent-color);
 }
 
   /* чекбокс */
@@ -877,7 +944,7 @@ textarea {
   border: 2px solid #000000;
   border-radius: 2px;
   margin-right: 7px;
-  
+
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
