@@ -902,13 +902,9 @@ textarea {
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  fill:currentColor;
+  fill: #212121;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.input-svg {
-  color: #212121;
 }
 
 .input:focus {
