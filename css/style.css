@@ -585,6 +585,7 @@ header {
   border-radius: 4px;
   background: var(--dark-bg-color);
   margin-right: 12px;
+  outline: none;
 }
 
 .subscribe-input::placeholder {
