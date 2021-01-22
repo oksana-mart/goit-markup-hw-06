@@ -741,11 +741,20 @@ header {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  color: #000000;
 }
 
-.close-button:hover,
+.close-sign {
+  fill: currentColor;
+}
+
 .close-button:focus {
   outline: none;
+}
+
+.close-button:focus .close-sign,
+.close-button:hover .close-sign  {
+  color: var(--accent-color);
 }
 
 textarea {
@@ -762,6 +771,7 @@ textarea {
 }
 
 .form-element {
+  display: block;
   margin-bottom: 4px;
   font-style: normal;
   font-weight: var(--secondary-font-weight);
@@ -827,13 +837,37 @@ textarea {
   color: #212121;
 }
 
-.input:active,
 .input:focus {
   outline: none;
   border-color: var(--accent-color);
 }
 
-.input:focus + .input-svg,
-.input:active + .input-svg {
+.input:focus + .input-svg {
   color:rgba(33, 150, 243, 0.9);
+}
+
+.input-svg:focus-within {
+  color:rgba(33, 150, 243, 0.9);
+  border-color: var(--accent-color);
+}
+
+.submit-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 55px 10px 56px;
+  min-width: 200px;
+  border-radius: 4px;
+  border-style: none;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  font-family: inherit;
+  font-weight: var(--main-font-weight);
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+
+  cursor: pointer;
+  outline: transparent;
 }
