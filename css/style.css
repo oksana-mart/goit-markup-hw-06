@@ -815,21 +815,25 @@ textarea {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.imput-svg {
+.form-svg {
   position: absolute;
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
-  text-align: center;
+  fill:currentColor;
+}
+
+.input-svg {
   color: #212121;
 }
 
-.form-svg {
-  fill: currentColor;
+.input:active,
+.input:focus {
+  outline: none;
+  border-color: var(--accent-color);
 }
 
-.field-holder:hover {
-  color: #2196F3;
+.input:focus + .input-svg,
+.input:active + .input-svg {
+  color:rgba(33, 150, 243, 0.9);
 }
