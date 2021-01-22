@@ -841,16 +841,28 @@ textarea {
   outline: none;
   border-color: var(--accent-color);
 }
-
-.input:focus + .input-svg {
+ 
+.field:focus-within input,
+.field:focus-within .input-svg {
   color:rgba(33, 150, 243, 0.9);
 }
 
-.input-svg:focus-within {
-  color:rgba(33, 150, 243, 0.9);
-  border-color: var(--accent-color);
+  /* чекбокс */
+
+.checkbox-text {
+  font-style: normal;
+  font-weight: var(--secondary-font-weight);
+  font-size: 14px;
+  line-height: 1.71;
+  color:var(--main-text-color);
 }
 
+.checkbox-accent {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+  /* кнопка Отправить */
 .submit-button {
   display: block;
   margin: 0 auto;
