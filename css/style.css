@@ -746,6 +746,8 @@ header {
 
 .close-sign {
   fill: currentColor;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-button:focus {
@@ -805,6 +807,8 @@ textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   cursor: pointer;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .field .input {
@@ -831,6 +835,8 @@ textarea {
   top: 50%;
   transform: translateY(-50%);
   fill:currentColor;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-svg {
@@ -844,12 +850,13 @@ textarea {
  
 .field:focus-within input,
 .field:focus-within .input-svg {
-  color:rgba(33, 150, 243, 0.9);
+  color: var(--accent-color);
 }
 
   /* чекбокс */
 
 .checkbox-text {
+  display: inline-block;
   font-style: normal;
   font-weight: var(--secondary-font-weight);
   font-size: 14px;
@@ -858,8 +865,39 @@ textarea {
 }
 
 .checkbox-accent {
-  text-decoration: underline;
+  text-decoration-line: underline;
   color: var(--accent-color);
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  cursor: pointer;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  margin-right: 7px;
+  
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.old-checkbox:checked + .checkbox-icon {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-image: url(../images/checked.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.old-checkbox:focus + .checkbox-icon {
+  border: 2px solid var(--accent-color);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
   /* кнопка Отправить */
